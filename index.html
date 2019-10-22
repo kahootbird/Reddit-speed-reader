@@ -8,7 +8,7 @@ div.login-box{
 }
 	</style>
 
-	
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width-device-width, inital-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -22,14 +22,16 @@ div.login-box{
 	</div>
 </nav>
 
+<div id="SpeedRead" class="card card-body bg-light mb-2 container text-center">
+
+</div>
 
 
-
-<div id="search" class="card card-body bg-light mb-2 container">
+<div id="search" class="card-body bg-light mb-2 container">
 		<h4>Search reddit</h4>
 		<form id="search-form">
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Enter Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input id="search-input" type="text" class="form-control" placeholder="Enter Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <div class="input-group-append">
     <span class="input-group-text" id="basic-addon2">Search</span>
   </div>
@@ -53,14 +55,17 @@ div.login-box{
 			<button type="submit" class="btn btn-dark btn-block mt-4">
 		Search </button>
 		</form>
+		<div id="results"></div>
 </div>
 
 
 
-
   <script src="./reddit_api.js"></script>
+  <script src="./index.js"></script>
+
 <script>
-myfunction();
+//myfunction();
+
 </script>
 
 </body>
