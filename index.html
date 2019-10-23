@@ -13,19 +13,26 @@ div.login-box{
 	<meta name="viewport" content="width-device-width, inital-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<title>Reddit speed reader</title>
+	<title>Reddit speed reader (Search)</title>
 </head>
 <body>
 <nav class="navbar bg-primary mb-1" style="color:white">
 	<div class="container">
-		<span class="navbar-brand">Reddit speed reader</span>
+		<span class="navbar-brand">Reddit speed reader (Search)</span>
 	</div>
 </nav>
-
+<button type="button" class="btn btn-secondary" id="GoBack" onClick="goback()">Go Back</button>
 <div id="SpeedRead" class="card card-body bg-light mb-2 container text-center">
+<h1 style="font-size:100px;">
 
+</h1>
 </div>
 
+<div id="Post_Number" class="card card-body bg-light mb-2 container text-center">
+<h1 style="font-size:100px;">
+
+</h1>
+</div>
 
 <div id="search" class="card-body bg-light mb-2 container">
 		<h4>Search reddit</h4>
@@ -33,7 +40,7 @@ div.login-box{
 <div class="input-group mb-3">
   <input id="search-input" type="text" class="form-control" placeholder="Enter Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <div class="input-group-append">
-    <span class="input-group-text" id="basic-addon2">Search</span>
+
   </div>
 </div>
 <div class="form-check form-check-inline">
@@ -52,7 +59,7 @@ div.login-box{
 					Latest
 				</label>
 			</div>
-			<button type="submit" class="btn btn-dark btn-block mt-4">
+			<button type="submit" class="btn btn-primary btn-block mt-4">
 		Search </button>
 		</form>
 		<div id="results"></div>

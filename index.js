@@ -73,11 +73,12 @@ let img_txt = 'https://www.redditstatic.com/icon.png'
   console.log(word_str)
   console.log(txt_arr.length)
   word_index = 0
-
+  show_speed_component();
+  hide_search_gui();
   if (interval_set == 0)
   {
   setInterval(
-    function(){ flash_words(); },300
+    function(){ flash_words(); },200
   )
     interval_set = 1
   }
@@ -95,25 +96,30 @@ function flash_words()
       word_index = 0
       word_str = txt_arr[current_line].split(" ")
       console.log("INDX" + word_index + " " + word_str.length)
+      set_line(current_line)
 
     }
     //Show the next word if the end hasn't been reached.
 
-    console.log(txt_arr[current_line])
+
     if (word_index < word_str.length)
     {
+      set_line(current_line)
+      console.log(txt_arr[current_line])
       set_word(word_str[word_index])
       word_index++
     }
 }
 
 //Hide the search button
-//hide_search_gui();
 
+hide_speed_component()
 //Set speed read word
 set_word(" ");
-function set_words()
+set_line("1")
+function set_line(argument)
 {
+    document.getElementById("Post_Number").innerHTML = "<h1 style='font-size:100px;'Search Result:>Result:" + argument + " </h1>"
 
 }
 function set_word(argument)
@@ -128,7 +134,23 @@ function hide_search_gui()
   document.getElementById("search-form").style.display = "none";
   document.getElementById("search").style.display = "none";
 }
-
+function hide_speed_component()
+{
+  document.getElementById("Post_Number").style.display = "none";
+  document.getElementById("SpeedRead").style.display = "none";
+  document.getElementById("GoBack").style.visibility = 'hidden';
+}
+function show_speed_component()
+{
+  document.getElementById("Post_Number").style.display = "block";
+  document.getElementById("SpeedRead").style.display = "block";
+  document.getElementById("GoBack").style.visibility = 'visible';
+}
+//On goback button click
+window.goback = function goback()
+{
+  console.log("goback event")
+}
 function showMessage(message, className) {
   //Create div
   const div = document.createElement('div');
