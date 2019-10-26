@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>div.login-box{
+  margin:0 auto;
+  width: 720px;
+}</style>
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, inital-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Reddit speed reader (Search)</title>
+</head>
+<body>
+<nav class="navbar bg-secondary mb-1" style="color:white">
+	<div class="container">
+		<span class="navbar-brand">Reddit speed reader (Search)</span>
+	</div>
+</nav>
+<button type="button" class="btn btn-secondary" id="GoBack" onClick="goback()">Go Back</button>
+<div id="SpeedRead" class="card card-body bg-light mb-2 container text-center">
+<h1 style="font-size:100px;">
+
+</h1>
+</div>
+
+<div id="Post_Number" class="card card-body bg-light mb-2 container text-center">
+<h1 style="font-size:100px;">
+
+</h1>
+</div>
+
+<div id="search" class="card-body bg-Secondary mb-2 container">
+		<h4>Search reddit</h4>
+		<form id="search-form">
+<div class="input-group mb-3">
+  <input id="search-input" type="text" class="form-control" placeholder="Enter Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+
+  </div>
+</div>
+<div class="form-check form-check-inline">
+				Sort by:
+				<input class="form-check-input m1-2" type="radio" name="sortby" value="relevance" checked="">
+				<label class="form-check-label">
+					Relevance
+				</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="sortby" value="new">
+				<label class="form-check-label">
+					Latest
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary btn-block mt-4">
+		Search </button>
+		</form>
+		<div id="results"></div>
+</div>
+
+
+
+  <script src="/reddit_api.471ec398.js"></script>
+  <script src="/Reddit-speed-reader.e31bb0bc.js"></script>
+
+<script>//myfunction();</script>
+
+</body>
+</html>

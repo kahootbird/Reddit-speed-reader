@@ -1,1 +1,1 @@
-parcel index.html
+node index.js
